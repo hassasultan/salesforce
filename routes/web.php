@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');
-    // return what you want
+    return true;
 });
 Route::get('/', function () {
     return view('home');
