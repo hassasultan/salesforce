@@ -25,5 +25,10 @@ Route::get('/contact', function () {
 
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::prefix('/admin')->group(function (){
+Route::middleware(['auth.basic'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
+
+    });
+});
 
