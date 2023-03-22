@@ -29,7 +29,7 @@ Route::get('/contact', function () {
 
 Auth::routes();
 Route::prefix('/admin')->group(function (){
-Route::middleware(['auth.basic'])->group(function () {
+Route::middleware(['auth'])->group(function () {
         Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
         Route::post('/set-home-setting', [App\Http\Controllers\AdminController::class, 'home_setting'])->name('admin.home.setting');
 
