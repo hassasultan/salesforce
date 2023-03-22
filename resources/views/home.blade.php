@@ -2,25 +2,27 @@
 
 @section('content')
 <div class="container">
-        @if ($setting->slider_heading != null || $setting->slider_image != null || $setting->slider_description != null)
-            <div class="intro pb-5">
-            <div class="intro-text">
-                <h1 class="intro-h1">{{ $setting->slider_heading }}</h1>
-                <p class="front-page">{{ $setting->slider_description }}</p>
-                <div class="buttons">
-                <a href="" class="btn-fill">Read More</a>
-                <a href="" class="btn-outline">Start Today</a>
-                </div>
-            </div>
-            @if ($setting?->slider_image)
-                <div class="intro-img">
-                    <img src="{{ asset('storage/'.$setting?->slider_image) }}" alt="">
-                </div>
-            @endif
-        <div class="scroll">
-            <a href="#variations"><img src="{{ asset('asset/img/icon/icon-scroll-down.svg') }}" alt=""><span class="text-muted">Scroll down</span></a>
+    @if ($setting != null)
+      @if ($setting->slider_heading != null || $setting->slider_image != null || $setting->slider_description != null)
+        <div class="intro pb-5">
+          <div class="intro-text">
+              <h1 class="intro-h1">{{ $setting->slider_heading }}</h1>
+              <p class="front-page">{{ $setting->slider_description }}</p>
+              <div class="buttons">
+              <a href="" class="btn-fill">Read More</a>
+              <a href="" class="btn-outline">Start Today</a>
+              </div>
+          </div>
+          @if ($setting?->slider_image)
+              <div class="intro-img">
+                  <img src="{{ asset('storage/'.$setting?->slider_image) }}" alt="">
+              </div>
+          @endif
+          <div class="scroll">
+              <a href="#variations"><img src="{{ asset('asset/img/icon/icon-scroll-down.svg') }}" alt=""><span class="text-muted">Scroll down</span></a>
+          </div>
         </div>
-        </div>
+      @endif
     @endif
     <!-- Clients -->
     {{-- <div class="clients text-center">
@@ -35,41 +37,42 @@
     </div> --}}
 
     <!-- Variations -->
-    @if ($setting->content_left_heading != null || $setting->content_left_image != null || $setting->content_left_description != null || $setting->content_right_heading != null || $setting->content_right_image != null || $setting->content_right_description != null)
-
-    <div id="variations" class="variations">
-        @if ($setting->content_left_heading != null || $setting->content_left_image != null || $setting->content_left_description != null)
-            <div class="first-variation">
-                <div class="img">
-                    <img src="{{ asset('storage/'.$setting?->content_left_image) }}" alt="">
+    @if ($setting != null)
+      @if ($setting->content_left_heading != null || $setting->content_left_image != null || $setting->content_left_description != null || $setting->content_right_heading != null || $setting->content_right_image != null || $setting->content_right_description != null)
+        <div id="variations" class="variations">
+            @if ($setting->content_left_heading != null || $setting->content_left_image != null || $setting->content_left_description != null)
+                <div class="first-variation">
+                    <div class="img">
+                        <img src="{{ asset('storage/'.$setting?->content_left_image) }}" alt="">
+                    </div>
+                    <div class="text">
+                        <h1 class="variations-h1">{{$setting->content_left_heading}}</h1>
+                        <p class="front-page">{{$setting->content_left_description}}</p>
+                        <div class="buttons">
+                            <a href="" class="btn-fill">Read More</a>
+                            <a href="" class="btn-outline">Start Today</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="text">
-                    <h1 class="variations-h1">{{$setting->content_left_heading}}</h1>
-                    <p class="front-page">{{$setting->content_left_description}}</p>
+            @endif
+            @if($setting->content_right_heading != null || $setting->content_right_image != null || $setting->content_right_description != null)
+                <div class="second-variation">
+                    <div class="text">
+                    <h1 class="variations-h1">{{ $setting->content_right_heading }}</h1>
+                    <p class="front-page">{{ $setting->content_right_description }}</p>
                     <div class="buttons">
                         <a href="" class="btn-fill">Read More</a>
                         <a href="" class="btn-outline">Start Today</a>
                     </div>
+                    </div>
+                    <div class="img">
+                    <img src="{{ asset('storage/'.$setting?->content_right_image) }}" alt="">
+                    <img class = "square" src="{{ asset('asset/img/icon/square.png') }}" alt="">
+                    </div>
                 </div>
-            </div>
-        @endif
-        @if($setting->content_right_heading != null || $setting->content_right_image != null || $setting->content_right_description != null)
-            <div class="second-variation">
-                <div class="text">
-                <h1 class="variations-h1">{{ $setting->content_right_heading }}</h1>
-                <p class="front-page">{{ $setting->content_right_description }}</p>
-                <div class="buttons">
-                    <a href="" class="btn-fill">Read More</a>
-                    <a href="" class="btn-outline">Start Today</a>
-                </div>
-                </div>
-                <div class="img">
-                <img src="{{ asset('storage/'.$setting?->content_right_image) }}" alt="">
-                <img class = "square" src="{{ asset('asset/img/icon/square.png') }}" alt="">
-                </div>
-            </div>
-        @endif
-    </div>
+            @endif
+        </div>
+      @endif
     @endif
 
     <!-- Service -->
