@@ -21,17 +21,35 @@ class AdminController extends Controller
         if($setting != null)
         {
             $data = $request->except(['_token']);
-            $data['slider_image'] = $this->slider_image($request->slider_image);
-            $data['content_left_image'] = $this->content_left_image($request->content_left_image);
-            $data['content_right_image'] = $this->content_right_image($request->content_right_image);
+            if($request->has('slider_image'))
+            {
+                $data['slider_image'] = $this->slider_image($request->slider_image);
+            }
+            if($request->has('content_left_image'))
+            {
+                $data['content_left_image'] = $this->content_left_image($request->content_left_image);
+            }
+            if($request->has('content_right_image'))
+            {
+                $data['content_right_image'] = $this->content_right_image($request->content_right_image);
+            }
             $setting->update($data);
         }
         else
         {
             $data = $request->all();
-            $data['slider_image'] = $this->slider_image($request->slider_image);
-            $data['content_left_image'] = $this->content_left_image($request->content_left_image);
-            $data['content_right_image'] = $this->content_right_image($request->content_right_image);
+            if($request->has('slider_image'))
+            {
+                $data['slider_image'] = $this->slider_image($request->slider_image);
+            }
+            if($request->has('content_left_image'))
+            {
+                $data['content_left_image'] = $this->content_left_image($request->content_left_image);
+            }
+            if($request->has('content_right_image'))
+            {
+                $data['content_right_image'] = $this->content_right_image($request->content_right_image);
+            }
             HomeSetting::create($data);
         }
         return redirect()->route('admin.home');
