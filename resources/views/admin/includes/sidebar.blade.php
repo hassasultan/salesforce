@@ -2,7 +2,9 @@
     <li class="nav-item {{ Route::is('admin.home') ? 'active active-item' : '' }}">
         <a href="{{route('admin.home')}}"><i class="fa fa-home me-3 fs-4" aria-hidden="true"></i>Home Page</a>
     </li>
-
+    <li class="nav-item {{ Route::is('admin.about') ? 'active active-item' : '' }}">
+        <a href="{{route('admin.about')}}"><i class="fa fa-home me-3 fs-4" aria-hidden="true"></i>About Page</a>
+    </li>
     <li class="w-100 logout_nav">
         <a href="{{ route('logout') }}"
         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

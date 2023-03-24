@@ -2,61 +2,66 @@
 @section('content')
 <div class="container">
     <div class="row">
-      <div class="main col-lg-8">
-        <div class="about">
-          <h2>We want to tell you a little story about our company</h2>
+        @if($setting != null)
+            <div class="main col-lg-12">
+                <div class="about">
+                <h2>{{ $setting->heading }}</h2>
 
-            <div class="post-img"><img src="{{ asset('asset/img/life.png') }}" alt=""></div>
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla illo corrupti debitis recusandae hic, ipsa sit quas? Autem fuga nihil voluptate dolorum similique dignissimos quaerat quidem consectetur nobis aliquid quae voluptatibus ex assumenda, amet adipisci eveniet porro soluta accusamus voluptatem doloremque, nulla impedit, culpa hic. Natus ducimus cum eveniet aliquam architecto magnam? Ab atque necessitatibus esse, ipsum excepturi eligendi ipsam veritatis praesentium blanditiis molestias culpa natus hic ex sit iste voluptatem quas, asperiores ea rem molestiae delectus tempora fugit. Ad nihil vero, debitis fuga at nostrum modi! Expedita ab ex, dolores, fugit quis optio laborum sint, officiis molestiae temporibus ratione totam odio explicabo beatae voluptatem neque deleniti iusto eaque? </p>
-            <h6>Lorem ipsum dolor sit, amet consectetur adipisicing:</h6>
-            <ul class="list-in-text">
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-            </ul>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laudantium, labore inventore fugiat doloremque ab soluta at. Ex, corporis? Necessitatibus distinctio quam sed unde soluta delectus facilis, corporis iusto. Nihil modi eveniet laudantium quisquam a expedita est inventore doloremque, ad officiis odit earum alias asperiores. Nihil accusamus rerum delectus cumque ducimus illum temporibus ratione dolores quibusdam sint facere provident aperiam quis dignissimos reiciendis sed iure quidem eos quasi, nesciunt, ipsum voluptatem at debitis odio. Doloribus explicabo dignissimos nemo rerum sunt amet aspernatur distinctio, deleniti blanditiis cumque soluta officiis suscipit. Minima nesciunt dicta magnam aliquid inventore voluptates laudantium quaerat aperiam in.</p>
-            <figure class="quote text-start">
-              <blockquote class="blockquote">
-                <p>A well-known quote, contained in a blockquote element.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab est repudiandae quasi hic sapiente earum velit fuga odio neque numquam eligendi qui tenetur ipsam, animi atque expedita eaque nesciunt in. Quidem dignissimos totam aperiam inventore quae omnis commodi, modi obcaecati qui culpa dolor, rem dolorum maxime temporibus! Consequatur pariatur quibusdam aspernatur ea, assumenda non, illum, vitae sed temporibus consequuntur quam. Exercitationem ut ad beatae explicabo! Quod fuga culpa, consectetur ipsa assumenda, ut exercitationem fugiat commodi quibusdam quam natus iure impedit recusandae aliquam nihil vitae reprehenderit, facilis deleniti cum eveniet veritatis. Atque ut blanditiis quos excepturi perferendis a, quidem modi.</p>
-            <div class="team text-center mt-5">
-              <h2>Our Team</h2>
-              <p class="front-page">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <div class="team-person">
-                <div class="person">
-                  <div class="photo"><img src="{{ asset('asset/img/team-1.png') }}" alt=""></div>
-                  <span class="name">John Fox</span>
-                  <span>Marketing Manager</span>
+                    <div class="post-img"><img src="{{ asset('storage/'.$setting?->banner) }}" alt=""></div>
+                    @if($setting->description != null)
+                        {!! $setting->description !!}
+                    @endif
+                    @if ($setting->heading_two != null)
+                        <figure class="quote text-start">
+                            <blockquote class="blockquote">
+                                <p>{{ $setting->heading_two }}</p>
+                            </blockquote>
+                            @if ($setting->tagline != null)
+                                <figcaption class="blockquote-footer">
+                                    {{ $setting->tagline }}
+                                    {{-- Someone famous in <cite title="Source Title">Source Title</cite> --}}
+                                </figcaption>
+                            @endif
+                        </figure>
+                    @endif
+                    {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ab est repudiandae quasi hic sapiente earum velit fuga odio neque numquam eligendi qui tenetur ipsam, animi atque expedita eaque nesciunt in. Quidem dignissimos totam aperiam inventore quae omnis commodi, modi obcaecati qui culpa dolor, rem dolorum maxime temporibus! Consequatur pariatur quibusdam aspernatur ea, assumenda non, illum, vitae sed temporibus consequuntur quam. Exercitationem ut ad beatae explicabo! Quod fuga culpa, consectetur ipsa assumenda, ut exercitationem fugiat commodi quibusdam quam natus iure impedit recusandae aliquam nihil vitae reprehenderit, facilis deleniti cum eveniet veritatis. Atque ut blanditiis quos excepturi perferendis a, quidem modi.</p> --}}
+                    @if ($setting->mission != null)
+                        {!! $setting->mission !!}
+                    @endif
+                    @if ($setting->vision != null)
+                        {!! $setting->vision !!}
+                    @endif
+                    <div class="team text-center mt-5">
+                        <h2>Our Team</h2>
+                        <p class="front-page">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <div class="team-person">
+                            <div class="person">
+                            <div class="photo"><img src="{{ asset('asset/img/team-1.png') }}" alt=""></div>
+                            <span class="name">John Fox</span>
+                            <span>Marketing Manager</span>
+                            </div>
+                            <div class="person">
+                            <div class="photo"><img src="{{ asset('asset/img/team-2.png') }}" alt=""></div>
+                            <span class="name">Kate Rose</span>
+                            <span>SEO</span>
+                            </div>
+                            <div class="person">
+                            <div class="photo"><img src="{{ asset('asset/img/team-3.png') }}" alt=""></div>
+                            <span class="name">Anna Brown</span>
+                            <span>UI Expert</span>
+                            </div>
+                            <div class="person">
+                            <div class="photo"><img src="{{ asset('asset/img/team-4.png') }}" alt=""></div>
+                            <span class="name">Mike Doe</span>
+                            <span>Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="person">
-                  <div class="photo"><img src="{{ asset('asset/img/team-2.png') }}" alt=""></div>
-                  <span class="name">Kate Rose</span>
-                  <span>SEO</span>
-                </div>
-                <div class="person">
-                  <div class="photo"><img src="{{ asset('asset/img/team-3.png') }}" alt=""></div>
-                  <span class="name">Anna Brown</span>
-                  <span>UI Expert</span>
-                </div>
-                <div class="person">
-                  <div class="photo"><img src="{{ asset('asset/img/team-4.png') }}" alt=""></div>
-                  <span class="name">Mike Doe</span>
-                  <span>Web Developer</span>
-                </div>
-              </div>
             </div>
-
-        </div>
-      </div>
-      <div class="sidebar col-lg-4">
+        @endif
+      {{-- <div class="sidebar col-lg-4">
         <div class="input-group">
           <div class="form-outline">
             <input id="search-input" type="search" id="form1" class="form-control" placeholder="search" />
@@ -134,7 +139,7 @@
               </div>
             </div>
           </div>
-      </div>
+      </div> --}}
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HomeSetting;
+use App\Models\AboutSetting;
 use App\Traits\SaveImage;
 use Illuminate\Http\Request;
 
@@ -53,5 +54,33 @@ class AdminController extends Controller
             HomeSetting::create($data);
         }
         return redirect()->route('admin.home');
+    }
+    public function about()
+    {
+        $setting = AboutSetting::first();
+        return view('admin.pages.about',compact('setting'));
+    }
+    public function about_setting(Request $request)
+    {
+        $setting = AboutSetting::first();
+        if($setting != null)
+        {
+            $data = $request->except(['_token']);
+            if($request->has('banner'))
+            {
+                $data['banner'] = $this->banner($request->banner);
+            }
+            $setting->update($data);
+        }
+        else
+        {
+            $data = $request->all();
+            if($request->has('banner'))
+            {
+                $data['banner'] = $this->banner($request->banner);
+            }
+            AboutSetting::create($data);
+        }
+        return redirect()->route('admin.about');
     }
 }

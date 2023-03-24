@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HomeSetting;
+use App\Models\AboutSetting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,5 +27,10 @@ class HomeController extends Controller
     {
         $setting = HomeSetting::first();
         return view('home',compact('setting'));
+    }
+    public function about()
+    {
+        $setting = AboutSetting::first();
+        return view('about',compact('setting'));
     }
 }

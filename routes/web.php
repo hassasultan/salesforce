@@ -19,9 +19,7 @@ Route::get('/clear-cache', function() {
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -32,6 +30,8 @@ Route::prefix('/admin')->group(function (){
 Route::middleware(['auth'])->group(function () {
         Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
         Route::post('/set-home-setting', [App\Http\Controllers\AdminController::class, 'home_setting'])->name('admin.home.setting');
+        Route::get('/about/setting', [App\Http\Controllers\AdminController::class, 'about'])->name('admin.about');
+        Route::post('/set-about-setting', [App\Http\Controllers\AdminController::class, 'about_setting'])->name('admin.about.setting');
 
     });
 });

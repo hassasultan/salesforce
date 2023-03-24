@@ -50,15 +50,15 @@ trait SaveImage
         return $filenamepath;
 
     }
-    public function ProductImage($image)
+    public function banner($image)
     {
         $img = $image;
         $number = rand(1,999);
         $numb = $number / 7 ;
         $extension      = $img->extension();
         $filenamenew    = date('Y-m-d')."_.".$numb."_.".$extension;
-        $filenamepath   = 'image'.'/'.'product/image/'.$filenamenew;
-        $filename       = $img->move(public_path('storage/image'.'/'.'product/image/'),$filenamenew);
+        $filenamepath   = 'image'.'/'.'banner/'.$filenamenew;
+        $filename       = $img->move(public_path('storage/image'.'/'.'banner/'),$filenamenew);
         return $filenamepath;
 
     }

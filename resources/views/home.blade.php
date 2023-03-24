@@ -30,8 +30,8 @@
       <div class="client-logo">
         <div><img src="{{ asset('asset/img/icon/go-sm-logo.svg') }}" alt=""></div>
         <div><img src="{{ asset('asset/img/icon/social-road-logo.svg') }}" alt=""></div>
-        <div><img src="{{ asset('asset/img/icon/firmbee-logo.svg"') }}" alt=""></div>
-        <div><img src="{{ asset('asset/img/icon/create-paper.svg"') }}" alt=""></div>
+        <div><img src="{{ asset('asset/img/icon/firmbee-logo.svg') }}" alt=""></div>
+        <div><img src="{{ asset('asset/img/icon/create-paper.svg') }}" alt=""></div>
         <div><img src="{{ asset('asset/img/icon/point-design-logo.svg') }}" alt=""></div>
       </div>
     </div> --}}
@@ -104,7 +104,7 @@
     </div> --}}
     <!-- Newsletter -->
 
-    {{-- <div class="update-news">
+    <div class="update-news">
       <div class="row">
         <div class="col-md-5 news-text">
           <h2>Get your update news</h2>
@@ -115,7 +115,7 @@
           <button type="submit">Send</button>
         </div>
       </div>
-    </div> --}}
+    </div>
 
       <!-- Team -->
     {{-- <div class="team text-center">
