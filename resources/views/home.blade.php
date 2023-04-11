@@ -9,8 +9,8 @@
               <h1 class="intro-h1">{{ $setting->slider_heading }}</h1>
               <p class="front-page">{{ $setting->slider_description }}</p>
               <div class="buttons">
-              <a href="" class="btn-fill">Read More</a>
-              <a href="" class="btn-outline">Start Today</a>
+              <a href="{{ route('about') }}" class="btn-fill">Read More</a>
+              {{-- <a href="" class="btn-outline">Start Today</a> --}}
               </div>
           </div>
           @if ($setting?->slider_image)
