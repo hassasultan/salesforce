@@ -165,7 +165,7 @@ h4::before {
   /* background-color: #0069a7; */
   padding: 12px 22px;
   font-weight: 900;
-  border: 3px solid #0069a7;
+  border-bottom: 3px solid #0069a7;
 }
 
 .btn-fill:hover {
