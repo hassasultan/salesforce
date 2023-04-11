@@ -9,17 +9,24 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum sunt optio consequuntur ducimus odit. Deleniti optio saepe unde omnis. Sapiente aliquam repellendus error id veniam totam dolores recusandae non dolorum?</p>
           <div class="line"></div>
 
-          <form id="contactForm">
-
+          <form id="contactForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            @csrf
+            <input type=hidden name="oid" value="00D2w00000RIFFt">
+            <input type=hidden name="retURL" value="https://cloudenigma.se/">
             <!-- Name input -->
             <div class="mb-3">
-              <input class="form-control" id="name" type="text" placeholder="Name *" data-sb-validations="required" />
-              <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+              <input class="form-control" id="first_name" type="text" name="first_name" placeholder="Name *" data-sb-validations="required" />
+              <div class="invalid-feedback" data-sb-feedback="first_name:required">First Name is required.</div>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" id="last_name" type="text" placeholder="Last Name *" name="last_name" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="last_name:required">Last Name is required.</div>
             </div>
 
             <!-- Email address input -->
             <div class="mb-3">
-              <input class="form-control" id="emailAddress" type="email*" placeholder="Email Address *" data-sb-validations="required, email" />
+              <input class="form-control" id="email" type="email*" placeholder="Email Address *" name="email" data-sb-validations="required, email" />
               <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
               <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
             </div>
@@ -38,8 +45,8 @@
             <!-- Message input -->
             <div class="mb-3">
 
-              <textarea class="form-control" id="contact" type="text" placeholder="Leave a Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-              <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+              <textarea class="form-control" id="description" name="description" type="text" placeholder="Leave a Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+              <div class="invalid-feedback" data-sb-feedback="description:required">Message is required.</div>
             </div>
 
             <!-- Form submit button -->
