@@ -62,15 +62,15 @@ trait SaveImage
         return $filenamepath;
 
     }
-    public function serviceImage($image)
+    public function client_logo($image)
     {
         $img = $image;
         $number = rand(1,999);
         $numb = $number / 7 ;
         $extension      = $img->extension();
         $filenamenew    = date('Y-m-d')."_.".$numb."_.".$extension;
-        $filenamepath   = 'service/image'.'/'.'img/'.$filenamenew;
-        $filename       = $img->move(public_path('storage/service/image'.'/'.'img'),$filenamenew);
+        $filenamepath   = 'client/image'.'/'.'img/'.$filenamenew;
+        $filename       = $img->move(public_path('storage/client/image'.'/'.'img'),$filenamenew);
         return $filenamepath;
 
     }

@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,9 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/set-home-setting', [App\Http\Controllers\AdminController::class, 'home_setting'])->name('admin.home.setting');
         Route::get('/about/setting', [App\Http\Controllers\AdminController::class, 'about'])->name('admin.about');
         Route::post('/set-about-setting', [App\Http\Controllers\AdminController::class, 'about_setting'])->name('admin.about.setting');
+        Route::resource('/team-management', TeamController::class);
+        Route::resource('/client-management', ClientController::class);
+
 
     });
 });
