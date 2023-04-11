@@ -67,7 +67,7 @@
                     </div>
                     <div class="img">
                     <img src="{{ asset('storage/'.$setting?->content_right_image) }}" alt="">
-                    <img class = "square" src="{{ asset('asset/img/icon/square.png') }}" alt="">
+                    {{-- <img class = "square" src="{{ asset('asset/img/icon/square.png') }}" alt=""> --}}
                     </div>
                 </div>
             @endif
@@ -104,7 +104,7 @@
     </div> --}}
     <!-- Newsletter -->
 
-    <div class="update-news">
+    {{-- <div class="update-news">
       <div class="row">
         <div class="col-md-5 news-text">
           <h2>Get your update news</h2>
@@ -115,7 +115,7 @@
           <button type="submit">Send</button>
         </div>
       </div>
-    </div>
+    </div> --}}
 
       <!-- Team -->
     {{-- <div class="team text-center">
