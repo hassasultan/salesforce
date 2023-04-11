@@ -62,7 +62,7 @@ h2 {
   content: '';
   width: 68%;
   height: 10px;
-  background-color: #0069a7;
+  /* background-color: #0069a7; */
   position: absolute;
   top: 0.75em;
   left: -5px;
