@@ -10,7 +10,10 @@
             <a class="nav-link  @if(Route::Is('home')) active @endif" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link @if(Route::Is('about')) active @endif" href="{{ route('about') }}">About</a>
+            <a class="nav-link @if(Route::Is('about')) active @endif" href="{{ route('about') }}">Who We Are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{{ route('about') }}">What We Do</a>
           </li>
           <li class="nav-item">
             <a class="nav-link @if(Route::Is('contact')) active @endif" href="{{ route('contact') }}">Contact</a>

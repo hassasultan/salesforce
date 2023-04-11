@@ -137,7 +137,7 @@ h4::before {
 
 .navbar li .nav-link:hover, .navbar li .active {
   font-weight: 900;
-  background-color: #0069a7;
+  border-bottom: 3px solid #0069a7;
 }
 
 .navbar .navbar-toggler:focus, .navbar .navbar-toggler:hover {
