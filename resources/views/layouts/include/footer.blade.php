@@ -39,6 +39,7 @@
         <div class="newsletter">
           <h6 class="fw-bold">Contact  Us</h6>
           <p class="text-muted"><a href="mailto:info@cloudenigma.se">info@cloudenigma.se</a></p>
+          <p class="text-muted"><a href="tel:+46761417996">+46 76 141 79 96</a></p>
             {{-- <form id="subscribe" action="">
               <label for="email">Youre e-mail:</label>
               <input type="email" placeholder="e-mail:" name="email" required>
