@@ -26,9 +26,9 @@
           {{-- <li class="nav-item-right">
             <a class="nav-link-right" href="#">Login / Sign Up</a>
           </li> --}}
-          <li class="nav-item-right">
+          {{-- <li class="nav-item-right">
             <a class="nav-link-right btn-fill" href="#">Start Today</a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </div>
