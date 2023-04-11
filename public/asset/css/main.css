@@ -240,7 +240,7 @@ h4::before {
 .variations {
   padding: 100px 0px;
   border-top: 1px solid #cbcbcbb6;
-  border-bottom: 1px solid #cbcbcbb6;
+  /* border-bottom: 1px solid #cbcbcbb6; */
 }
 
 .variations .first-variation {
