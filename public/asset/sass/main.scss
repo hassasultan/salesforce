@@ -35,7 +35,7 @@ input:focus, textarea:focus{
     outline:0px !important;
     box-shadow: none !important;
     border:1px solid $gray !important;
-    
+
 }
 button{
     border:none;
@@ -101,7 +101,7 @@ h4::before{
 }
 
 .navbar{
-    
+
     background-color: white;
     z-index: 5;
     margin: 0 auto;
@@ -115,26 +115,26 @@ h4::before{
         }
     }
     li{
-        
+
         .nav-link{
             display: inline-block;
             color:black;
             padding: 6px 20px !important;
             margin-right: 20px;
         }
-        
+
         .nav-link:hover, .active{
             font-weight: 900;
             background-color: $yellow;
         }
-        
+
     }
     .navbar-toggler:focus,.navbar-toggler:hover{
         border: none;
         box-shadow: none;
         outline: none;
     }
-    
+
 }
 .right{
     .nav-link-right{
@@ -147,7 +147,7 @@ h4::before{
     .nav-link-right:hover{
         cursor: pointer;
     }
-    
+
 
 }
 
@@ -178,13 +178,13 @@ h4::before{
     cursor: pointer;
     color:black;
     background-color: $yellow;
-    
+
 }
 
 .buttons{
     a{
         display: inline-block;
-        
+
     }
     .btn-fill{
         margin-right: 25px;
@@ -222,13 +222,13 @@ h4::before{
         justify-content: space-evenly;
         flex-wrap: wrap;
         justify-items:baseline;
-        
-            
+
+
             img{
                 height: 65px;
                 max-width: 150px;
             }
-        
+
     }
 }
 
@@ -265,7 +265,7 @@ h4::before{
             }
         }
     }
-    
+
 }
 
 //Service
@@ -280,7 +280,7 @@ h4::before{
         gap: 40px;
         margin-top: 40px;
         .item{
-            
+
             span{
                 font-weight: bold;
                 display: block;
@@ -310,12 +310,12 @@ h4::before{
     .news-form{
 
         position: relative;
-        
+
         input{
-            
+
             width: 100%;
             padding: 15px 25px;
-            
+
         }
         button{
             position: absolute;
@@ -369,8 +369,8 @@ h4::before{
     }
 }
 .single-post{
-   
-    
+
+
     .share{
         margin: 30px 0px;
         padding: 10px 0 20px;
@@ -378,7 +378,7 @@ h4::before{
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 10px;
-        
+
         a{
             text-decoration: none;
             display: inline-block;
@@ -391,7 +391,7 @@ h4::before{
             padding: 5px 0px;
 
         }
-       
+
         a:hover{
             color: black;
             font-weight: 900;
@@ -411,12 +411,12 @@ h4::before{
     }
     #commentForm, #contactForm{
         padding: 30px 0px;
-        
+
         button{
             margin-top: 0;
         }
-    
-    
+
+
     }
 }
 
@@ -439,7 +439,7 @@ h4::before{
         color:$yellow;
         font-size: 3em;
         z-index: -1;
-        
+
         }
     }
     .blockquote-footer{
@@ -456,7 +456,7 @@ ul.list-in-text {
         padding-left: 1em;
         text-indent: -1em;
       }
-      
+
       li:before {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -473,7 +473,7 @@ ul.list-in-text {
         input, textarea{
             border-radius: 0px !important;
         }
-        
+
     }
 }
 
@@ -493,9 +493,9 @@ ul.list-in-text {
             }
         }
         .post-main-info{
-            
+
             position: relative;
-            
+
             .post-meta{
                 font-size: 0.9em;
                 padding: 10px 0px;
@@ -514,7 +514,7 @@ ul.list-in-text {
 .pagination{
     margin-top: 30px;
     li{
-        
+
         a {
             color: black;
         }
@@ -531,14 +531,14 @@ ul.list-in-text {
         .a:focus {
             outline: none;
           }
-        
-          
+
+
     }
     .page-link:focus {
         box-shadow: none !important;
     }
-    
-    
+
+
 }
 //sidebar
 
@@ -550,7 +550,7 @@ ul.list-in-text {
             #search-input{
                 border-radius: 0px;
             }
-            
+
         }
         #search-button{
             position: absolute;
@@ -564,9 +564,9 @@ ul.list-in-text {
     .recent-posts{
         position: relative;
         .post-item{
-            
+
             margin-bottom: 50px;
-            
+
             .post-title{
                 position: relative;
                 display: inline-block;
@@ -574,7 +574,7 @@ ul.list-in-text {
                 color:black;
                 font-size: 1.2em;
                 font-weight: 600;
-                
+
             }
             .post-title::before{
                 content: '';
@@ -591,7 +591,7 @@ ul.list-in-text {
                 &::before{
                     display: block;
                 }
-                
+
 
             }
             .post-meta{
@@ -614,14 +614,14 @@ ul.list-in-text {
         }
         .card-img-overlay{
             background-color: rgba(255, 255, 255, 0.85);
-            
+
             .text-overlay{
                 color:black;
                 top: 50%;
                 position: absolute;
                 transform: translateY(-50%);
             }
-            
+
             .card-text{
                 font-size: 0.8em;
             }
@@ -648,10 +648,10 @@ ul.list-in-text {
                 background-color: white;
                 border: 1px solid $yellow;
             }
-            
+
         }
     }
-   
+
 }
 
 //footer
@@ -661,7 +661,7 @@ footer{
     border-bottom: 1px solid $light-gray;
     padding: 50px 0px;
     margin-bottom: 30px;
-    
+
     h6{
         padding: 20px 0px;
         font-weight: 900;
@@ -702,7 +702,7 @@ footer{
                 background-position: 10px center;
                 padding: 10px 10px 10px 40px;
                 margin: 15px 0px;
-                
+
             }
             button{
                 width: 100%;
@@ -744,7 +744,7 @@ footer{
         .img{
             width: 60%;
         }
-   
+
     }
 
     .team{
@@ -773,7 +773,7 @@ footer{
         }
     }
     .single-post{
-        .share{  
+        .share{
             a{
                 width: 100px;
             }
@@ -790,7 +790,7 @@ footer{
                 width: 40%;
             }
         }
-        
+
     }
 }
 @media (min-width: 992px) {
@@ -822,17 +822,17 @@ footer{
         }
     }
     .single-post{
-        .share{  
+        .share{
             a{
                 width: 130px;
             }
         }
     }
-    
+
     .all-posts{
         .post-item{
             position: relative;
-            display: flex; 
+            display: flex;
             .post-img{
                 min-width: 300px;
                 height:300px;
@@ -840,7 +840,7 @@ footer{
                 margin-right: 20px;
             }
             .post-main-info{
-                
+
                 .post-title{
                     padding: 0px 0px 10px;
                 }
@@ -881,7 +881,7 @@ footer{
         }
     }
     .single-post{
-        .share{  
+        .share{
             a{
                 width: 150px;
             }
