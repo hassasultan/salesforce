@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-      <div class="main col-lg-8">
+      <div class="main col-lg-12">
         <div class="contact-page">
           <h2 class="underscore mb-5">Please let us know if you have any questions</h2>
           <div class="line"></div>
@@ -15,7 +15,7 @@
             <input type=hidden name="retURL" value="https://cloudenigma.se/">
             <!-- Name input -->
             <div class="mb-3">
-              <input class="form-control" id="first_name" type="text" name="first_name" placeholder="Name *" data-sb-validations="required" />
+              <input class="form-control" id="first_name" type="text" name="first_name" placeholder="First Name *" data-sb-validations="required" />
               <div class="invalid-feedback" data-sb-feedback="first_name:required">First Name is required.</div>
             </div>
 
@@ -56,7 +56,7 @@
           </form>
         </div>
       </div>
-      <div class="sidebar col-lg-4">
+      {{-- <div class="sidebar col-lg-4">
         <div class="input-group">
           <div class="form-outline">
             <input id="search-input" type="search" id="form1" class="form-control" placeholder="search" />
@@ -134,7 +134,7 @@
               </div>
             </div>
           </div>
-      </div>
+      </div> --}}
       </div>
     </div>
   </div>
