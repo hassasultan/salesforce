@@ -49,8 +49,8 @@
                         <h1 class="variations-h1">{{$setting->content_left_heading}}</h1>
                         <p class="front-page">{{$setting->content_left_description}}</p>
                         <div class="buttons">
-                            <a href="" class="btn-fill">Read More</a>
-                            <a href="" class="btn-outline">Start Today</a>
+                            <a href="{{ route('about') }}" class="btn-fill">Read More</a>
+                            {{-- <a href="" class="btn-outline">Start Today</a> --}}
                         </div>
                     </div>
                 </div>
@@ -61,8 +61,8 @@
                     <h1 class="variations-h1">{{ $setting->content_right_heading }}</h1>
                     <p class="front-page">{{ $setting->content_right_description }}</p>
                     <div class="buttons">
-                        <a href="" class="btn-fill">Read More</a>
-                        <a href="" class="btn-outline">Start Today</a>
+                        <a href="{{ route('about') }}" class="btn-fill">Read More</a>
+                        {{-- <a href="" class="btn-outline">Start Today</a> --}}
                     </div>
                     </div>
                     <div class="img">
