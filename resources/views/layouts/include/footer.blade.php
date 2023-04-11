@@ -4,7 +4,7 @@
         <div class="about">
           <img src="./img/logo.png" alt="">
           <p class="text-muted py-4">
-            Start working with Firmbee which can provide you with all the tools needed to run an effcieint business remotely.
+            Start working with cloudEnigma which can provide you with all the tools needed to run an effcieint business.
           </p>
           <div class="social-media">
             <a href="" class="me-2 text-reset"><img src="./img/icon/social-media-01.svg" alt=""></a>
@@ -48,7 +48,7 @@
 
       </div>
       <div class="copyright">
-        <p>&copy; 2022 YOUR-DOMAIN | Created by <a href="https://firmbee.com/solutions/free-invoicing-app-billing-software/" title="Firmbee - Free Invoicing App">Firmbee.com</a></p>
+        <p>&copy; 2022 CLOUDENIGMA.SE </p>
         <!--
         This template is licenced under Attribution 3.0 (CC BY 3.0 PL),
         You are free to: Share and Adapt. You must give appropriate credit, you may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
