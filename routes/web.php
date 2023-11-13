@@ -22,11 +22,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/about', function()
 {
-    return "Under Construction...";
+    return "Under Maintenance...";
 })->name('about');
 // Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/contact', function () {
-    return "Under Construction...";
+    return "Under Maintenance...";
 
 })->name('contact');
 // Route::get('/contact', function () {
