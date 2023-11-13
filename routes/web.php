@@ -20,10 +20,18 @@ Route::get('/clear-cache', function() {
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/about', function()
+{
+    return "Under Construction...";
+})->name('about');
+// Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/contact', function () {
-    return view('contact');
+    return "Under Construction...";
+
 })->name('contact');
+// Route::get('/contact', function () {
+//     return view('contact');
+// })->name('contact');
 
 
 Auth::routes();
