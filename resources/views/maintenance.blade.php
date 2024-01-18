@@ -29,7 +29,7 @@
     <main class="my-auto">
         <div class="container">
             <h1 class="page-title">We're coming soon</h1>
-            <p class="page-description">Something Big is Coming Your Way”, “Be The First To Know”, or “Drop By Again Soon
+            <p class="page-description">Something Big is Coming Your Way”, “Be The First To Know”, or “Drop By Again Soon”
             </p>
             {{-- <p>Stay connected</p>
             <nav class="footer-social-links">
