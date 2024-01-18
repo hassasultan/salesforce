@@ -19,7 +19,7 @@
         <div class="container">
             <nav class="navbar navbar-dark bg-transparenet">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('asset/img/logo.png') }}" alt="logo" class="img-fluid">
+                    <img src="{{ asset('asset/img/logo-new.png') }}" alt="logo" class="img-fluid">
                 </a>
                 {{-- <span class="navbar-text ml-auto d-none d-sm-inline-block">978-130-5444 </span>
                 <span class="navbar-text d-none d-sm-inline-block">jerald_glover@glennie.tv</span> --}}
